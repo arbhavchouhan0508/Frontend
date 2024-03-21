@@ -6,13 +6,13 @@ import { BsCircleFill, BsFillCheckCircleFill, BsFillTrashFill } from 'react-icon
 function Home() {
     const [todos, setTodos] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:3001/get')
+        axios.get('https://backend-bf8r.onrender.com/get')
         .then(result => setTodos(result.data))
         .catch(err => console.log(err))
     }, [])
 
     const handleEdit = (id) => {
-        axios.put('http://localhost:3001/update/'+id)
+        axios.put('https://backend-bf8r.onrender.com/'+id)
         .then(result => {
             location.reload()
         })
@@ -20,7 +20,7 @@ function Home() {
     }
 
     const handleDelete = (id) => {
-        axios.delete('http://localhost:3001/delete/'+id)
+        axios.delete('https://backend-bf8r.onrender.com/'+id)
         .then(result => {
             location.reload()
         })
