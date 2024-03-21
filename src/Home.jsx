@@ -12,7 +12,7 @@ function Home() {
     }, [])
 
     const handleEdit = (id) => {
-        axios.put('https://backend-bf8r.onrender.com/'+id)
+        axios.put('https://backend-bf8r.onrender.com/update/'+id)
         .then(result => {
             location.reload()
         })
@@ -20,7 +20,7 @@ function Home() {
     }
 
     const handleDelete = (id) => {
-        axios.delete('https://backend-bf8r.onrender.com/'+id)
+        axios.delete('https://backend-bf8r.onrender.com/delete/'+id)
         .then(result => {
             location.reload()
         })
